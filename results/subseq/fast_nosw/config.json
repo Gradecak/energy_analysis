@@ -1,0 +1,50 @@
+{
+  "type": "web",
+  "devices": ["nexus7"],
+  "replications": 6,
+  "duration": 10000,
+  "browsers": ["chrome"],
+  "powerprofile_path": "/home/jnes/GREEN_LAB/android-runner/example/batterystats/power_profile.xml",
+  "monkeyrunner_path": "$ANDROID_SDK_ROOT/tools/bin/monkeyrunner",
+  "systrace_path": "$ANDROID_SDK_ROOT/platform-tools/systrace/systrace.py",
+  "paths": [
+    "https://tinder.com/",
+    "https://toppletrump.com/",
+    "https://www.trivago.com/",
+    "https://twitter.com",
+    "https://m.uber.com",
+    "https://www.chromestatus.com/features",
+    "https://jakearchibald-gcm.appspot.com/",
+    "https://aerotwist.com/blog/guitar-tuner/",
+    "https://jsfeatures.in",
+    "https://wiki-offline.jakearchibald.com/",
+    "https://resume-nation.github.io"
+  ],
+  "profilers":{
+    "trepn": {
+      "sample_interval": 100,
+      "data_points": ["battery_power"]
+    },
+    "batterystats": {
+      "cleanup": true
+    }
+  },
+  "scripts": {
+    "before_experiment": "before_experiment.py",
+    "before_run": "before_run.py",
+    "after_launch": "after_launch.py",
+    "interaction": [
+      {
+        "type": "python2",
+        "path": "interaction.py",
+        "timeout": 500,
+        "logcat_regex": "some keyword"
+      }
+    ],
+    "before_close": "before_close.py",
+    "after_run": "after_run.py",
+    "after_experiment": "after_experiment.py",
+    "aggregation": "aggregation.py"
+  },
+  "time_between_run": 5000
+}

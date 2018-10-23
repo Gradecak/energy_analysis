@@ -1,0 +1,9 @@
+Battery History (0% used, 88 used of 256KB, 4 strings using 168):
+                    0 (9) RESET:TIME: 2018-10-22-01-16-32
+                    0 (1) 097 status=charging health=good plug=none temp=297 volt=4252 +running +wake_lock +wifi_multicast +wifi_radio +phone_scanning +screen phone_state=out brightness=bright +wifi_running +wifi wifi_signal_strength=3 wifi_suppl=completed
+                    0 (2) 097 fg=u0a78:"com.quicinc.trepn"
+                    0 (2) 097 top=u0a35:"com.android.chrome"
+                    0 (2) 097 user=0:"0"
+                    0 (2) 097 userfg=0:"0"
+            +20s328ms (2) 097 -top=u0a35:"com.android.chrome"
+            +20s328ms (2) 097 +top=u0a14:"com.android.launcher"
