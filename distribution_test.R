@@ -50,7 +50,7 @@ subseq <- rbind(subseq_fast_nosw, subseq_fast_sw)
 subseq <- rbind(subseq, subseq_slow_nosw)
 subseq <- rbind(subseq, subseq_slow_sw)
 subseq_plot <- ggqqplot(subseq$value)
-subseqshapiro.test(subseq$value)
+shapiro.test(subseq$value)
 
 ggarrange(initial_plot, subseq_plot, ncol=2, labels = c("Initial Distribution", "Subseq Distribution"))
 
